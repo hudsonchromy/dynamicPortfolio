@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
-        <link href="style.css">
+        <link href="../style.css">
     </head>
 <body>
     <?php include('../sidebar.php')?>
