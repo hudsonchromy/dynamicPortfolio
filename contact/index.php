@@ -21,14 +21,14 @@
             <div class="section">
                 <h1>Contact Me</h1>
                 <a href="https://www.linkedin.com/in/hchromy">
-                    <img src="images/linkedIn.png" alt="LinkedIn Icon">
+                    <img src="../images/linkedIn.png" alt="LinkedIn Icon">
                 </a>
                 <p>LinkedIn</p>
                 <a href="https://github.com/hudsonchromy">
-                    <img src="images/github.png" alt="Github Icon">
+                    <img src="../images/github.png" alt="Github Icon">
                 </a>
                 <p>Github</p>
-                <img src="images/email.png" alt="Email Icon">
+                <img src="../images/email.png" alt="Email Icon">
                 <p>hjc0018@auburn.edu</p>
             </div>
         <div>
