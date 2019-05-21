@@ -12,7 +12,7 @@
         <link href="../style.css">
     </head>
 <body>
-    <?php include('../sidebar.php')?>
+    <?php include('http://thawing-journey-11836.herokuapp.com/style.css')?>
 </body>
     
 </html>
