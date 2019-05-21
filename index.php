@@ -64,9 +64,11 @@ html {
             <hb>
                 Hudson Chromy
             </hb>
-            <div id ="myAnimation">
-                <img id="logoPicture"src="images/DVD.png" alt="" style="margin-left: 0px;">
-            </div>
+            <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y" target="_blank">
+                <div id ="myAnimation">
+                    <img id="logoPicture"src="images/DVD.png" alt="" style="margin-left: 0px;">
+                </div>
+            </a>
                 <img src="images/parot.png" alt="Parrot">
             </div>
         </div>
