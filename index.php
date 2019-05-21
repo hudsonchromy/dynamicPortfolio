@@ -54,6 +54,7 @@ html {
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
+        
         <link href="style.css">
     </head>
 <body>
@@ -94,10 +95,12 @@ function myMove() {
         }
         if (posY == ($('html').height() - 100) || posY < 0) {
             changeY *= -1;
+            changeColor();
             b1 = true;
         }
         else if (posX == ($('html').width() - 116 - ($('html').width() / 4)) || posX < 0) {
             changeX *= -1;
+            changeColor();
             b2 = true;
         }
         if (b1 && b2) {
@@ -107,6 +110,10 @@ function myMove() {
         posY += changeY;
         elem.style.top = posY + 'px'; 
         elem.style.left = posX + 'px'; 
+    }
+    function changeColor() {
+        var logos = ['pink.png', 'pink2.png', 'green.png', 'grey.png', 'yellow.png'];
+        $('#logoPicture').attr('src', 'images/dvds/' + logos[Math.floor(Math.random()*logos.length)])
     }
 }
 </script>
