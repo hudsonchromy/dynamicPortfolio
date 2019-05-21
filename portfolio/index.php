@@ -9,10 +9,10 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
-        <link href="../style.css">
+        <link href="http://thawing-journey-11836.herokuapp.com/style.css">
     </head>
 <body>
-    <?php include('http://thawing-journey-11836.herokuapp.com/style.css')?>
+    <?php include('../sidebar.php')?>
 </body>
     
 </html>
