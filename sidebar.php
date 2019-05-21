@@ -7,10 +7,10 @@
         <h3>Auburn University '22</h3>
         <h3 id="lastSub">Software Engineering</h3>
         </a>
-        <a href="/portfolio">Portfolio</a>
-        <a href="/skills">Skills</a>
-        <a href="/resume.pdf" target="_blank">Resume</a>
-        <a href="/contact">Contact</a>
+        <a href="http://thawing-journey-11836.herokuapp.com//portfolio">Portfolio</a>
+        <a href="http://thawing-journey-11836.herokuapp.com//skills">Skills</a>
+        <a href="http://thawing-journey-11836.herokuapp.com//resume.pdf" target="_blank">Resume</a>
+        <a href="http://thawing-journey-11836.herokuapp.com//contact">Contact</a>
         <br>
         <div class="col-sm-12">
             <a href="../resume.pdf">
@@ -20,12 +20,12 @@
             </a>
             <a href="https://www.linkedin.com/in/hchromy">
                 <div class="col-sm-4">
-                    <img src="images/linkedIn.png" alt="LinkedIn Icon">
+                    <img src="http://thawing-journey-11836.herokuapp.com/images/linkedIn.png" alt="LinkedIn Icon">
                 </div>
             </a>
             <a href="https://github.com/hudsonchromy">
                 <div class="col-sm-4">
-                    <img src="images/github.png" alt="Github Icon">
+                    <img src="http://thawing-journey-11836.herokuapp.com//images/github.png" alt="Github Icon">
                 </div>
             </a>
         </div>
