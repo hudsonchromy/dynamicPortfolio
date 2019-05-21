@@ -53,6 +53,17 @@
         }
     }
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+    <script>
+			var pattern = Trianglify({
+				height: window.innerHeight,
+				width: window.innerWidth,
+				cell_size: 80 + Math.random() * 70,
+				variance: 0.2 + Math.random(),
+				stroke_width: 1.8 + Math.random(),
+				x_colors: 'Greys',
+				y_colors: 'match_x'
+			});
+			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
+			document.body.style.backgroundAttachment = 'fixed';
+		</script>
 </html>
