@@ -20,7 +20,7 @@
 <body>
     <div class="col-sm-12">
         <?php include('../sidebar.php')?>
-        <div class="col-sm-9">
+        
             <div class="section">
                 <h1>Contact Me</h1>
                 <a href="https://www.linkedin.com/in/hchromy">
