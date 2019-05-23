@@ -49,7 +49,6 @@
         var fontOn = 0;
         function frame() {
             fontOn++;
-            console.log(fontOn);
             $('#firstLetter').css('font-family', fonts[fontOn % (fonts.length - 1)]);
         }
     }
