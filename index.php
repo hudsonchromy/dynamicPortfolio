@@ -54,7 +54,7 @@ html {
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        <link href="style.css">
+        <?php include('cdns.php')?>
     </head>
 <body>
     <div class="col-sm-12">
@@ -64,7 +64,7 @@ html {
                 Hudson Chromy
             </hb>
             <div id ="myAnimation">
-                <img id="logoPicture"src="images/DVD.png" alt="" style="margin-left: 0px;">
+                <img id="logoPicture"src="images/DVD.png" alt="Hudson Chromy DVD Style Logo" style="margin-left: 0px;">
             </div>
                 <img src="images/parot.png" alt="Parrot">
             </div>
