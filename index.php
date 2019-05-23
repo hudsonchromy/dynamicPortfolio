@@ -82,16 +82,11 @@ function myMove() {
     var changeX = 1;
     var changeY = 1;
     var id = setInterval(frame, 12);
-    var changed = 0;
     var b1 = false;
     var b2 = false;
     function frame() {
         b1 = false;
         b2 = false;
-        changed ++;
-        if (changed == 4) {
-            recolor();
-        }
         if (posY == ($('html').height() - 100) || posY < 0) {
             changeY *= -1;
             b1 = true;
