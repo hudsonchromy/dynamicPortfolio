@@ -10,13 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-<<<<<<< HEAD
         <?php include('cdns.php');?>
-=======
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-        <link href="../style.css">
->>>>>>> 381afcec966c55558ff0e18eef0c157719e0891c
     </head>
 <body>
     <div class="col-sm-12">
