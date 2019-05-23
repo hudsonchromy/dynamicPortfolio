@@ -17,7 +17,6 @@
 <body>
     <div class="col-sm-12">
         <?php include('../sidebar.php')?>
-        <div class="col-sm-9">
             <div class="col-sm-12">
                 <?php
                     $files = scandir('../images/skills/');
