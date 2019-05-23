@@ -1,8 +1,7 @@
-<html>
 <div class = "col-sm-3">
 <div class="sidenav">
         <a href="../" style="text-decoration: none;">
-        <img alt="" class="img-circle" src="images/me.jpg">
+        <img alt="Picture of Hudson Chromy" class="img-circle" src="images/hudsonChromy.jpg">
         <h2><span id="firstLetter">H</span>udson Chromy</h2>
         <h3>Auburn University '22</h3>
         <h3 id="lastSub">Software Engineering</h3>
@@ -15,20 +14,19 @@
         <div class="col-sm-12">
             <a href="../resume.pdf">
                 <div class="col-sm-4">
-                    <img src="images/email.png" alt="Email Icon">
+                    <img src="images/email.png" alt="Email Icon, Links to Hudson Chromy's Email">
                 </div>
             </a>
             <a href="https://www.linkedin.com/in/hchromy">
                 <div class="col-sm-4">
-                    <img src="images/linkedIn.png" alt="LinkedIn Icon">
+                    <img src="images/linkedIn.png" alt="LinkedIn Icon, Link to Hudson Chromy's LinkedIn">
                 </div>
             </a>
             <a href="https://github.com/hudsonchromy">
                 <div class="col-sm-4">
-                    <img src="images/github.png" alt="Github Icon">
+                    <img src="images/github.png" alt="Github Icon, Link to Hudson Chromy's GitHub">
                 </div>
             </a>
         </div>
     </div>
 </div>
-</html>
