@@ -24,11 +24,11 @@
             <div class="section">
                 <h1>Contact Me</h1>
                 <a href="https://www.linkedin.com/in/hchromy">
-                    <img src="images/linkedIn.png" alt="LinkedIn Icon, Links to Hudson Chromy's LinkedIn">
+                    <img src="../images/linkedIn.png" alt="LinkedIn Icon, Links to Hudson Chromy's LinkedIn">
                 </a>
                 <p>LinkedIn</p>
                 <a href="https://github.com/hudsonchromy">
-                    <img src="images/github.png" alt="Github Icon, Links to Hudson Chromy's GitHub">
+                    <img src="../images/github.png" alt="Github Icon, Links to Hudson Chromy's GitHub">
                 </a>
                 <p>Github</p>
                 <img src="../images/email.png" alt="Email Icon">
