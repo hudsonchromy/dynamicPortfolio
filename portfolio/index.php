@@ -9,6 +9,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
+        <?php include('cdns.php');?>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     </head>
 <body>
     <?php include('../sidebar.php')?>
