@@ -12,6 +12,7 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|BioRhyme+Expanded:800|Bungee+Outline|Bungee+Shade|Creepster|Miltonian+Tattoo|Podkova:700|Rye|Slackey&display=swap" rel="stylesheet">
+        <?php include('cdns.php')?>
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great&display=swap" rel="stylesheet">
     </head>
 <body>
@@ -21,11 +22,11 @@
             <div class="section">
                 <h1>Contact Me</h1>
                 <a href="https://www.linkedin.com/in/hchromy">
-                    <img src="images/linkedIn.png" alt="LinkedIn Icon">
+                    <img src="images/linkedIn.png" alt="LinkedIn Icon, Links to Hudson Chromy's LinkedIn">
                 </a>
                 <p>LinkedIn</p>
                 <a href="https://github.com/hudsonchromy">
-                    <img src="images/github.png" alt="Github Icon">
+                    <img src="images/github.png" alt="Github Icon, Links to Hudson Chromy's GitHub">
                 </a>
                 <p>Github</p>
                 <img src="images/email.png" alt="Email Icon">
