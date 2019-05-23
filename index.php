@@ -37,6 +37,8 @@
     </head>
 <body>
     <div class="col-sm-12">
+        <?php include('sidebar.php');?>
+        <div class="col-sm-9">
             <hb>
                 Hudson Chromy
             </hb>
