@@ -35,6 +35,8 @@ html {
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
 
 
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -63,9 +65,11 @@ html {
             <hb>
                 Hudson Chromy
             </hb>
-            <div id ="myAnimation">
-                <img id="logoPicture"src="images/DVD.png" alt="Hudson Chromy DVD Style Logo" style="margin-left: 0px;">
-            </div>
+            <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y" target="_blank">
+                <div id ="myAnimation">
+                    <img id="logoPicture"src="images/DVD.png" alt="" style="margin-left: 0px;">
+                </div>
+            </a>
                 <img src="images/parot.png" alt="Parrot">
             </div>
         </div>
@@ -89,10 +93,12 @@ function myMove() {
         b2 = false;
         if (posY == ($('html').height() - 100) || posY < 0) {
             changeY *= -1;
+            changeColor();
             b1 = true;
         }
         else if (posX == ($('html').width() - 116 - ($('html').width() / 4)) || posX < 0) {
             changeX *= -1;
+            changeColor();
             b2 = true;
         }
         if (b1 && b2) {
@@ -103,6 +109,23 @@ function myMove() {
         elem.style.top = posY + 'px'; 
         elem.style.left = posX + 'px'; 
     }
+    function changeColor() {
+        var logos = ['pink.png', 'pink2.png', 'green.png', 'grey.png', 'yellow.png'];
+        $('#logoPicture').attr('src', 'images/dvds/' + logos[Math.floor(Math.random()*logos.length)])
+    }
 }
 </script>
+    <script>
+			var pattern = Trianglify({
+				height: window.innerHeight,
+				width: window.innerWidth,
+				cell_size: 80 + Math.random() * 70,
+				variance: 0.2 + Math.random(),
+				stroke_width: 1.8 + Math.random(),
+				x_colors: 'Greys',
+				y_colors: 'match_x'
+			});
+			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
+			document.body.style.backgroundAttachment = 'fixed';
+		</script>
 </html>

@@ -3,9 +3,9 @@
     --grid-gap: 10px; 
 }
 
-body {
+/* body {
     background-image: url("images/trianglify.png")!important;
-}
+} */
 
 body>h1 {
     padding-left: 300px;

@@ -14,6 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|BioRhyme+Expanded:800|Bungee+Outline|Bungee+Shade|Creepster|Miltonian+Tattoo|Podkova:700|Rye|Slackey&display=swap" rel="stylesheet">
         <?php include('cdns.php');?>
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     </head>
 <body>
     <div class="col-sm-12">
@@ -22,14 +24,22 @@
             <div class="section">
                 <h1>Contact Me</h1>
                 <a href="https://www.linkedin.com/in/hchromy">
+<<<<<<< HEAD
                     <img src="images/linkedIn.png" alt="LinkedIn Icon, Links to Hudson Chromy's LinkedIn">
                 </a>
                 <p>LinkedIn</p>
                 <a href="https://github.com/hudsonchromy">
                     <img src="images/github.png" alt="Github Icon, Links to Hudson Chromy's GitHub">
+=======
+                    <img src="../images/linkedIn.png" alt="LinkedIn Icon">
+                </a>
+                <p>LinkedIn</p>
+                <a href="https://github.com/hudsonchromy">
+                    <img src="../images/github.png" alt="Github Icon">
+>>>>>>> 381afcec966c55558ff0e18eef0c157719e0891c
                 </a>
                 <p>Github</p>
-                <img src="images/email.png" alt="Email Icon">
+                <img src="../images/email.png" alt="Email Icon">
                 <p>hjc0018@auburn.edu</p>
             </div>
         <div>
@@ -52,4 +62,17 @@
         }
     }
 </script>
+    <script>
+			var pattern = Trianglify({
+				height: window.innerHeight,
+				width: window.innerWidth,
+				cell_size: 80 + Math.random() * 70,
+				variance: 0.2 + Math.random(),
+				stroke_width: 1.8 + Math.random(),
+				x_colors: 'Greys',
+				y_colors: 'match_x'
+			});
+			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
+			document.body.style.backgroundAttachment = 'fixed';
+		</script>
 </html>
