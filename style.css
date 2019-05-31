@@ -158,6 +158,10 @@ h2, h3 {
     transition: 0.3s;
     background: #FF2840;
     color: white;
+    width: 100%;
+    height: 50%;
+    margin: 10px;
+    padding: 10px;
   }
 
   .card h1, .card p {
@@ -171,7 +175,8 @@ h2, h3 {
   }
 
   .card img {
-      height: 10%;
+      width: auto;
+      height: 40%;
       margin-top: 1px;
   }
   
@@ -219,3 +224,6 @@ h2, h3 {
     height: 340px;
 }
 
+p2 {
+  font-size: 16px;
+}
