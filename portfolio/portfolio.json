@@ -21,7 +21,7 @@
     }, {
         "name": "Competetive Programming Team",
         "description": "",
-        "image": "images/portfolio/placeholder.jpg",
+        "image": "http://www.hudsonchromy.com/images/portfolio/placeholder.jpg",
         "skills":["Python", "Java", "Algorithms"],
         "link": ""
     }
