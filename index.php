@@ -52,12 +52,13 @@ function myMove() {
     var id = setInterval(frame, 12);
     var b1 = false;
     var b2 = false;
-    var change = 59;
-    var heightChange = 0;
+    var change = 0;
+    var heightChange = 60;
     if ($('html').width() > 600) {
         change = $('html').width() / 4;
         heightChange = 0;
     }
+    console.log(change);
     function frame() {
         b1 = false;
         b2 = false;
