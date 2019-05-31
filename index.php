@@ -53,13 +53,15 @@ function myMove() {
     var b1 = false;
     var b2 = false;
     var change = 0;
+    var heightChange = 0;
     if ($('html').width() > 600) {
         change = $('html').width() / 4;
+        heightChange = 59;
     }
     function frame() {
         b1 = false;
         b2 = false;
-        if (posY == ($('html').height() - 89) || posY < -14) {
+        if (posY == ($('html').height() - 89 - heightChange) || posY < -14) {
             changeY *= -1;
             changeColor();
             b1 = true;
