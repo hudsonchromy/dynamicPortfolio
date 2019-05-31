@@ -12,11 +12,14 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-        <?php include('cdns.php');?>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <?php include('../cdns.php');?>
     </head>
 <body>
+    <?php include('../menu.php');?>
     <div class="col-sm-12">
         <?php include('../sidebar.php')?>
+            <div class="col-sm-9">
             <div class="col-sm-12">
                 <?php
                     $files = scandir('../images/skills/');
