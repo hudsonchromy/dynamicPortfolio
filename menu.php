@@ -100,14 +100,11 @@
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="www.hudsonchromy.com" class="active">Home</a>
-  <a href="www.hudsonchromy.com/portfolio/">Portfolio</a>
-  <a href="www.hudsonchromy.com/skills/">Skills</a>
-  <a href="www.hudsonchromy.com/resume-19.pdf">Resume</a>
-  <a href="www.hudsonchromy.com/contact/">Contact</a>
-  <div class="dropdown">
-  </div> 
-  <a href="#about">About</a>
+  <a href="/" class="active">Home</a>
+  <a href="/portfolio/">Portfolio</a>
+  <a href="/skills/">Skills</a>
+  <a href="/resume-19.pdf">Resume</a>
+  <a href="/contact/">Contact</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
