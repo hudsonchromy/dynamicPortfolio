@@ -16,6 +16,27 @@
 <body>
     <?php include('../menu.php');?>
     <?php include('../sidebar.php')?>
+        <div class="col-sm-12">
+            <?php
+            $i = 0;
+            $jsonArray = json_decode(file_get_contents('portfolio.json'));
+            for ($i=0; $i < sizeOf($jsonArray); $i++):
+            ?>
+            <div class="col-sm-6">
+                <div class="card">
+                    <h2><?php echo $jsonArray[$i]->name;?></h2>
+                    <p2><?php echo $jsonArray[$i]->description ?></p2>
+                    <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
+                    <div class="col-sm-12">
+                        <div class="col-sm-4">
+                        <img src="/images/skills/Competetive_Programming.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endfor;?>
+        </div>
+    </div>
 </body>
 <script>
     var pattern = Trianglify({
