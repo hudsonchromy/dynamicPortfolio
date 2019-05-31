@@ -16,29 +16,16 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
 
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
         <meta name="theme-color" content="#ffffff">
+        
         <?php include('cdns.php')?>
     </head>
 <body>
+<?php include('menu.php');?>
     <div class="col-sm-12">
         <?php include('sidebar.php');?>
-        <div class="col-sm-9">
+        
             <hb>
                 Hudson Chromy
             </hb>
@@ -65,15 +52,19 @@ function myMove() {
     var id = setInterval(frame, 12);
     var b1 = false;
     var b2 = false;
+    var change = 0;
+    if ($('html').width() > 600) {
+        change = $('html').width() / 4;
+    }
     function frame() {
         b1 = false;
         b2 = false;
-        if (posY == ($('html').height() - 100) || posY < 0) {
+        if (posY == ($('html').height() - 89) || posY < -14) {
             changeY *= -1;
             changeColor();
             b1 = true;
         }
-        else if (posX == ($('html').width() - 116 - ($('html').width() / 4)) || posX < 0) {
+        else if (posX >= ($('html').width() - 130 - change) || posX < -14) {
             changeX *= -1;
             changeColor();
             b2 = true;
@@ -88,7 +79,10 @@ function myMove() {
     }
     function changeColor() {
         var logos = ['pink.png', 'pink2.png', 'green.png', 'grey.png', 'yellow.png'];
-        $('#logoPicture').attr('src', 'images/dvds/' + logos[Math.floor(Math.random()*logos.length)])
+        var colors = ['#D43A74', '#EE2F50', '#658B50', '#504B4F', '#FFCD48']
+        var colorNum = Math.floor(Math.random()*logos.length);
+        $('#logoPicture').attr('src', 'images/dvds/' + logos[colorNum])
+        $('.active').css("background-color", colors[colorNum]);
     }
 }
 </script>
