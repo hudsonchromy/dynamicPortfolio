@@ -1,4 +1,4 @@
-<html>
+<html></html>
 <style>
 
 </style>
@@ -7,22 +7,11 @@
         Hudson Chromy
         </title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://cdn.auburn.edu/assets/css/bootstrap.min.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
-        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-
-
-
         <meta name="theme-color" content="#ffffff">
-        
         <?php include('cdns.php')?>
     </head>
 <body>
-<?php include('menu.php');?>
+    <?php include('menu.php');?>
     <div class="col-sm-12">
         <?php include('sidebar.php');?>
         
