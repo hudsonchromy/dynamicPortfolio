@@ -3,26 +3,26 @@
         "name": "Algorithm Visualizer",
         "description": "This is a Javascript application that shows the search space and paths found by A-Star BFS and DFS algorithms.", 
         "image": "../images/portfolio/visualizerPicture.jpg", 
-        "skills":["Javascript", "Algorithms"],
+        "skills":["../images/skills/Javascript.png", "../images/skills/Data_Structures_and_algorithms.png"],
         "link": "visualizer.php"
         
     }, {
         "name": "Polyfold",
         "description": "Polyfold is a 3D video game developed in Java with JavaFX made to crowdsource information regarding protein folding.", 
         "image": "../images/portfolio/polyfoldPicture.png", 
-        "skills":["Java", "JavaFX", "CSS"],
+        "skills":["../images/skills/Java.png", "../images/skills/CSS.png"],
         "link": "polyfold.php"
     }, {
         "name": "Javadoc Comment Writer",
         "description": "", 
         "image": "../images/portfolio/commentmaker.png", 
-        "skills":["Java"],
+        "skills":["../images/skills/Java.png"],
         "link": ""
     }, {
         "name": "Competetive Programming Team",
         "description": "",
         "image": "http://www.hudsonchromy.com/images/portfolio/placeholder.jpg",
-        "skills":["Python", "Java", "Algorithms"],
+        "skills":["../images/skills/Python.png", "../images/skills/Java.png", "../images/skills/Data_Structures_and_Algorithms.png"],
         "link": ""
     }
 ]
