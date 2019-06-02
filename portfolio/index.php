@@ -1,44 +1,48 @@
 <html>
     <head>
         <title>
-        Hudson Chromy
+        Portfolio - Hudson Chromy
         </title>
         <link rel="stylesheet" type="text/css" href="../style.css">
-        <link rel="stylesheet" href="https://cdn.auburn.edu/assets/css/bootstrap.min.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
         <?php include('../cdns.php');?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     </head>
 <body>
     <?php include('../menu.php');?>
     <?php include('../sidebar.php')?>
-        <div class="col-sm-12">
-            <?php
-            $i = 0;
-            $jsonArray = json_decode(file_get_contents('portfolio.json'));
-            for ($i=0; $i < sizeOf($jsonArray); $i++):
-            ?>
-            <div class="col-sm-6">
-                <div class="card">
-                    <h2><?php echo $jsonArray[$i]->name;?></h2>
-                    <p2><?php echo $jsonArray[$i]->description ?></p2>
-                    <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
-                    <div class="col-sm-12">
-                        <div class="col-sm-4">
-                        <img src="/images/skills/Competetive_Programming.png" alt="image">
-                        </div>
+    <div class="main-gallery">
+        <?php   
+        $i = 0;
+        $jsonArray = json_decode(file_get_contents('portfolio.json'));
+        for ($i=0; $i < sizeOf($jsonArray); $i++):
+        ?>
+            <div class="card gallery-cell">
+                <h1><?php echo $jsonArray[$i]->name;?></h1>
+                <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
+                <div class="col-sm-12">
+                <?php
+                $j = 0;
+                $skillsArray = $jsonArray[$i]->skills;
+                for ($j=0; $j < sizeOf($skillsArray); $j++):
+                ?>
+                    <div class="col-sm-4">
+                        <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
                     </div>
+                <?php endfor;?>
                 </div>
             </div>
-            <?php endfor;?>
-        </div>
+        <?php endfor;?>
     </div>
+    </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 <script>
+    var flkty = new Flickity( '.main-gallery', {
+        // options
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true
+    });
     var pattern = Trianglify({
         height: window.innerHeight,
         width: window.innerWidth,
