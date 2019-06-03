@@ -1,16 +1,46 @@
 <html>
     <head>
         <title>
-            Skills - Hudson Chromy
+        Portfolio - Hudson Chromy
         </title>
         <link rel="stylesheet" type="text/css" href="../style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <?php include('../cdns.php');?>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     </head>
-<body>
+<style>
+    .flickity-viewport {
+        height: 50%!important;
+    }
+</style>
+<body onload="makeNone()">
     <?php include('../menu.php');?>
-        <?php include('../sidebar.php')?>
-            <div class="col-sm-12 skillCard">
+    <?php include('../sidebar.php')?>
+    <div class="main-gallery" id="projectcarousel">
+        <?php   
+        $i = 0;
+        $jsonArray = json_decode(file_get_contents('../portfolio/portfolio.json'));
+        for ($i=0; $i < sizeOf($jsonArray); $i++):
+        ?>
+                <div class="card gallery-cell">
+                    <h1><?php echo $jsonArray[$i]->name;?></h1>
+                    <a href="<?php echo $jsonArray[$i]->link; ?>">
+                    <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
+                    </a>
+                    <div class="col-sm-12">
+                    <?php
+                    $j = 0;
+                    $skillsArray = $jsonArray[$i]->skills;
+                    for ($j=0; $j < sizeOf($skillsArray); $j++):
+                    ?>
+                        <div class="col-sm-4">
+                            <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
+                        </div>
+                    <?php endfor;?>
+                    </div>
+                </div>
+        <?php endfor;?>
+    </div>
+    <div class="col-sm-12 skillCard">
                 <?php
                     $i = 0;
                     $files = scandir('../images/skills/');
@@ -30,13 +60,14 @@
                 }
                 endforeach;?>
             </div>
-        </div>
     </div>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 <script>
-function showProjects() {
-    $('.main-gallery').css('display', 'block');
+function makeNone() {
+    $('#projectcarousel').css('display', 'none');
 }
+
 function myMove() {
     class Skill {
         constructor(num, below) {
@@ -47,9 +78,8 @@ function myMove() {
             this.m = true;
         }
         bounce() {
-            this.velocity = - this.velocity / 1.6;
-            console.log(this.velocity);
-            if (this.velocity > -0.65) {
+            this.velocity = - this.velocity / 1.48;
+            if (this.velocity > -0.85) {
                 this.m = false;
             }
         }
@@ -57,7 +87,7 @@ function myMove() {
             return this.m;
         }
         accelerate() {
-            this.velocity += 0.035;
+            this.velocity += 0.04;
         }
         atBottom() {
             let diff = 0;
@@ -78,6 +108,14 @@ function myMove() {
     var bounceFrames = 0;
     var v = -1;
     var a = 0.003;
+    function showProjects() {
+        $('#projectcarousel').css('display', 'block');
+        var diff = $('#projectcarousel').height();
+        for (var k = 0; k < 4; k++) {
+            skills[1 + (3 * k)].top -= diff;
+            setTop(1 + (3 * k));
+        }
+    }
     function frame() {
         var changed = false;
         for (i = 0; i < 4; i++) {
@@ -110,7 +148,6 @@ function myMove() {
             bounceFrames = 0;
             speed = 0;
             row -= 1;
-            console.log('here');
             if (row == 0) {
                 clearInterval(id);
                 showProjects();
@@ -127,6 +164,12 @@ function myMove() {
 }
 </script>
 <script>
+    var flkty = new Flickity( '.main-gallery', {
+        // options
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true
+    });
     var pattern = Trianglify({
         height: window.innerHeight,
         width: window.innerWidth,
