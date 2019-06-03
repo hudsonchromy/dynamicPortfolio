@@ -58,7 +58,7 @@ body img {
     display: block;
 }
 
-.col-xs-4 img {
+.col-sm-4 img {
     width: 80%;
     height: auto;
 }
@@ -71,7 +71,7 @@ body img {
     height: auto;
 }
 
-.sidenav .col-xs-4 a{
+.sidenav .col-sm-4 a{
   padding: 0px;
 }
 
