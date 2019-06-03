@@ -16,21 +16,23 @@
         $jsonArray = json_decode(file_get_contents('portfolio.json'));
         for ($i=0; $i < sizeOf($jsonArray); $i++):
         ?>
-            <div class="card gallery-cell">
-                <h1><?php echo $jsonArray[$i]->name;?></h1>
-                <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
-                <div class="col-sm-12">
-                <?php
-                $j = 0;
-                $skillsArray = $jsonArray[$i]->skills;
-                for ($j=0; $j < sizeOf($skillsArray); $j++):
-                ?>
-                    <div class="col-sm-4">
-                        <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
+                <div class="card gallery-cell">
+                    <h2><?php echo $jsonArray[$i]->name;?></h2>
+                    <a href="<?php echo $jsonArray[$i]->link; ?>">
+                    <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
+                    </a>
+                    <div class="col-sm-12">
+                    <?php
+                    $j = 0;
+                    $skillsArray = $jsonArray[$i]->skills;
+                    for ($j=0; $j < sizeOf($skillsArray); $j++):
+                    ?>
+                        <div class="col-sm-4">
+                            <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
+                        </div>
+                    <?php endfor;?>
                     </div>
-                <?php endfor;?>
                 </div>
-            </div>
         <?php endfor;?>
     </div>
     </div>
