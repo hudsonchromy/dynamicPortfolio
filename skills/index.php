@@ -9,8 +9,32 @@
     </head>
 <body>
     <?php include('../menu.php');?>
-    <div class="col-sm-12">
         <?php include('../sidebar.php')?>
+            <div class="main-gallery" style="display: none;">
+                <?php   
+                $i = 0;
+                $jsonArray = json_decode(file_get_contents('portfolio.json'));
+                for ($i=0; $i < sizeOf($jsonArray); $i++):
+                ?>
+                        <div class="card gallery-cell">
+                            <h1><?php echo $jsonArray[$i]->name;?></h1>
+                            <a href="<?php echo $jsonArray[$i]->link; ?>">
+                            <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
+                            </a>
+                            <div class="col-sm-12">
+                            <?php
+                            $j = 0;
+                            $skillsArray = $jsonArray[$i]->skills;
+                            for ($j=0; $j < sizeOf($skillsArray); $j++):
+                            ?>
+                                <div class="col-sm-4">
+                                    <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
+                                </div>
+                            <?php endfor;?>
+                            </div>
+                        </div>
+                <?php endfor;?>
+            </div>
             <div class="col-sm-12 skillCard">
                 <?php
                     $i = 0;
@@ -24,7 +48,7 @@
                         echo "<div class='col-sm-3 skill'>";
                     }
                 ?>
-                    <img id="<?php echo 'skill'.$i?>" src="../images/skills/<? echo $file;?>">
+                    <img id="<?php echo 'skill'.$i?>" src="../images/skills/<? echo $file;?>" onclick="myMove()">
                 <? 
                 if ($i%3 == 0) {
                     echo "</div>";
@@ -35,21 +59,35 @@
     </div>
 </body>
 <script>
-window.onload = function() {
-    myMove();
-}
+// window.onload = function() {
+//     myMove();
+// }
 function myMove() {
     class Skill {
         constructor(num, below) {
             this.below = below;
-            this.top = 0;
+            this.top = 16;
             this.num = num;
+            this.velocity = 4;
+            this.m = true;
+        }
+        bounce() {
+            this.velocity = - this.velocity / 1.6;
+            console.log(this.velocity);
+            if (this.velocity > -0.65) {
+                this.m = false;
+            }
+        }
+        moving() {
+            return this.m;
+        }
+        accelerate() {
+            this.velocity += 0.035;
         }
         atBottom() {
             let diff = 0;
             for (var j = 0; j < this.below.length; j++) {
-                console.log(this.below[j]);
-                diff += skills[this.below[j]].height() + 40;
+                diff += skills[this.below[j]].height() + 20;
             }
             return($('html').height() - diff > document.getElementById("skill" + this.num).getBoundingClientRect().bottom);
         }
@@ -60,27 +98,42 @@ function myMove() {
     var id = setInterval(frame, 2);
     var skills = [new Skill(0, []), new Skill(1, [2,3]), new Skill(2, [3]), new Skill(3, []), new Skill(4, [5,6]), new Skill(5, [6]), new Skill(6, []), new Skill(7, [8,9]), new Skill(8, [9]), new Skill(9, []), new Skill(10, [11]), new Skill(11, []), new Skill(12, [])];
     var row = 3;
-    var speed = 1.5;
+    var speed = 0;
+    var change = 0.02;
+    var bounceFrames = 0;
+    var v = -1;
+    var a = 0.003;
     function frame() {
-        speed += 0.015;
         var changed = false;
         for (i = 0; i < 4; i++) {
             if (row + i * 3 == 12) {
                 continue;
             }
-            if (skills[row + i * 3].atBottom()) {
-                skills[row + i * 3].top += speed;
-                setTop(row + i * 3);
-                if (row != 3) {
-                    skills[(row + 1) + i * 3].top -= speed;
-                    setTop((row + 1) + i * 3);
+            var curr = skills[row + i * 3];
+            if (curr.moving()) { 
+                if (!curr.atBottom()) {
+                    curr.bounce();
+                    curr.top -= 3;
+                    if (row != 3) { // adjust one below
+                        skills[(row + 1) + i * 3].top += 3;
+                        setTop((row + 1) + i * 3);
                     
+                    }
+                }
+                curr.accelerate();
+                curr.top += curr.velocity;
+                setTop(row + i * 3);
+                if (row != 3) { // adjust one below
+                    skills[(row + 1) + i * 3].top -= curr.velocity;
+                    setTop((row + 1) + i * 3);
+                
                 }
                 changed = true;
             }
         }
         if (!changed) {
-            speed = 1
+            bounceFrames = 0;
+            speed = 0;
             row -= 1;
             console.log('here');
             if (row == 0) {
