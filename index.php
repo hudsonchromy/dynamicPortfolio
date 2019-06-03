@@ -43,7 +43,7 @@ function myMove() {
     var b2 = false;
     var change = 0;
     var heightChange = 60;
-    if ($('html').width() > 600) {
+    if ($('html').width() > 768) {
         change = $('html').width() / 4;
         heightChange = 0;
     }
