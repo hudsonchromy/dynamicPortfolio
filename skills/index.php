@@ -10,31 +10,6 @@
 <body>
     <?php include('../menu.php');?>
         <?php include('../sidebar.php')?>
-            <div class="main-gallery" style="display: none;">
-                <?php   
-                $i = 0;
-                $jsonArray = json_decode(file_get_contents('portfolio.json'));
-                for ($i=0; $i < sizeOf($jsonArray); $i++):
-                ?>
-                        <div class="card gallery-cell">
-                            <h1><?php echo $jsonArray[$i]->name;?></h1>
-                            <a href="<?php echo $jsonArray[$i]->link; ?>">
-                            <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
-                            </a>
-                            <div class="col-sm-12">
-                            <?php
-                            $j = 0;
-                            $skillsArray = $jsonArray[$i]->skills;
-                            for ($j=0; $j < sizeOf($skillsArray); $j++):
-                            ?>
-                                <div class="col-sm-4">
-                                    <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
-                                </div>
-                            <?php endfor;?>
-                            </div>
-                        </div>
-                <?php endfor;?>
-            </div>
             <div class="col-sm-12 skillCard">
                 <?php
                     $i = 0;
@@ -59,9 +34,9 @@
     </div>
 </body>
 <script>
-// window.onload = function() {
-//     myMove();
-// }
+function showProjects() {
+    $('.main-gallery').css('display', 'block');
+}
 function myMove() {
     class Skill {
         constructor(num, below) {
@@ -138,6 +113,7 @@ function myMove() {
             console.log('here');
             if (row == 0) {
                 clearInterval(id);
+                showProjects();
             }
         }
     }
