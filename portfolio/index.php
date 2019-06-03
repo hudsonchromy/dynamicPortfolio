@@ -21,13 +21,13 @@
                     <a href="<?php echo $jsonArray[$i]->link; ?>">
                     <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
                     </a>
-                    <div class="col-sm-12">
+                    <div class="col-xs-12">
                     <?php
                     $j = 0;
                     $skillsArray = $jsonArray[$i]->skills;
                     for ($j=0; $j < sizeOf($skillsArray); $j++):
                     ?>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
                         </div>
                     <?php endfor;?>
