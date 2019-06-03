@@ -58,11 +58,11 @@ body img {
     display: block;
 }
 
-.col-sm-4 img {
+.col-xs-4 img {
     width: 80%;
     height: auto;
 }
-.col-sm-12 a {
+.col-xs-12 a {
     padding: 0px;
 }
 
@@ -71,7 +71,7 @@ body img {
     height: auto;
 }
 
-.sidenav .col-sm-4 a{
+.sidenav .col-xs-4 a{
   padding: 0px;
 }
 
@@ -177,7 +177,7 @@ h2, h3 {
     opacity: 0.85;
   }
 
-  .skillCard .col-sm-3 {
+  .skillCard .col-xs-3 {
     min-width: 0;
   }
 
@@ -199,11 +199,11 @@ h2, h3 {
       margin-top: 1px;
   }
 
-  .card .col-sm-4 {
+  .card .col-xs-4 {
     width: auto;
   }
 
-  .card .col-sm-4 img {
+  .card .col-xs-4 img {
     height: 14%;
     width: auto;
   }
@@ -218,7 +218,7 @@ h2, h3 {
     width: auto;
   }
 
-  #projectcarousel .col-sm-4 img {
+  #projectcarousel .col-xs-4 img {
     height: 16%;
     width: auto;
   }
@@ -242,7 +242,7 @@ h2, h3 {
     background-color: #FF2840;
     opacity: 0.8;
     color: #fff;
-	padding: 15px;
+	  padding: 15px;
     max-width: 900px;
     margin:0 auto;
     margin-bottom: 10px;
@@ -266,6 +266,11 @@ h2, h3 {
 .skill>img{
     width: auto;
     height: 12%;
+}
+@media only screen and (max-width: 768px) {
+  .skill>img{
+      height: 8%;
+  }
 }
 
 
