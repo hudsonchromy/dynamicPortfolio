@@ -26,13 +26,13 @@
                     <a href="<?php echo $jsonArray[$i]->link; ?>">
                     <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
                     </a>
-                    <div class="col-sm-12">
+                    <div class="col-xs-12">
                     <?php
                     $j = 0;
                     $skillsArray = $jsonArray[$i]->skills;
                     for ($j=0; $j < sizeOf($skillsArray); $j++):
                     ?>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                             <img src="<?php echo $skillsArray[$j]; ?>" alt="image">
                         </div>
                     <?php endfor;?>
@@ -40,7 +40,7 @@
                 </div>
         <?php endfor;?>
     </div>
-    <div class="col-sm-12 skillCard">
+    <div class="col-xs-12 skillCard">
                 <?php
                     $i = 0;
                     $files = scandir('../images/skills/');
@@ -50,7 +50,7 @@
                     }
                     $i++;
                     if ($i%3 == 1) {
-                        echo "<div class='col-sm-3 skill'>";
+                        echo "<div class='col-xs-3 skill'>";
                     }
                 ?>
                     <img id="<?php echo 'skill'.$i?>" src="../images/skills/<? echo $file;?>" onclick="myMove()">
