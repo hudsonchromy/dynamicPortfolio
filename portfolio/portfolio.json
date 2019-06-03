@@ -3,7 +3,7 @@
         "name": "Algorithm Visualizer",
         "description": "This is a Javascript application that shows the search space and paths found by A-Star BFS and DFS algorithms.", 
         "image": "../images/portfolio/visualizerPicture.jpg", 
-        "skills":["../images/skills/Javascript.png", "../images/skills/Data_Structurs_and_Algorithms.png"],
+        "skills":["../images/skills/Javascript.png", "../images/skills/Data_Structures_and_Algorithms.png"],
         "link": "/visualizer.php"
         
     }, {
