@@ -15,8 +15,9 @@
 <body onload="makeNone()">
     <?php include('../menu.php');?>
     <?php include('../sidebar.php')?>
-    <div class="main-gallery" id="projectcarousel">
-        <?php   
+
+    <div class="carousel main-gallery" id="projectcarousel">
+      <?php   
         $i = 0;
         $jsonArray = json_decode(file_get_contents('../portfolio/portfolio.json'));
         for ($i=0; $i < sizeOf($jsonArray); $i++):
@@ -40,20 +41,22 @@
                 </div>
         <?php endfor;?>
     </div>
+
+
     <div class="col-xs-12 skillCard">
-                <?php
-                    $i = 0;
-                    $files = scandir('../images/skills/');
-                    foreach($files as $file):
-                    if(pathinfo($file, PATHINFO_EXTENSION) != "png") {
-                        continue;
-                    }
-                    $i++;
-                    if ($i%3 == 1) {
-                        echo "<div class='col-xs-3 skill'>";
-                    }
+            <?php
+                $i = 0;
+                $files = scandir('../images/skills/');
+                foreach($files as $file):
+                if(pathinfo($file, PATHINFO_EXTENSION) != "png") {
+                    continue;
+                }
+                $i++;
+                if ($i%3 == 1) {
+                    echo "<div class='col-xs-3 skill'>";
+                }
                 ?>
-                    <img id="<?php echo 'skill'.$i?>" src="../images/skills/<? echo $file;?>" onclick="myMove()">
+                    <img id="<?php echo 'skill'.$i?>" src="../images/skills/<? echo $file;?>" onclick="myMove('<?php echo basename($file)?>')">
                 <? 
                 if ($i%3 == 0) {
                     echo "</div>";
@@ -64,11 +67,12 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 <script>
+var run = false;
 function makeNone() {
     $('#projectcarousel').css('display', 'none');
 }
 
-function myMove() {
+function myMove(sk) {
     class Skill {
         constructor(num, below) {
             this.below = below;
@@ -87,19 +91,24 @@ function myMove() {
             return this.m;
         }
         accelerate() {
-            this.velocity += 0.04;
+            this.velocity += 0.05;
         }
         atBottom() {
             let diff = 0;
             for (var j = 0; j < this.below.length; j++) {
-                diff += skills[this.below[j]].height() + 20;
+                diff += skills[this.below[j]].height() + 10;
             }
-            return($('html').height() - diff > document.getElementById("skill" + this.num).getBoundingClientRect().bottom);
+            return($('html').height() - diff + 10 > document.getElementById("skill" + this.num).getBoundingClientRect().bottom);
         }
         height() {
             return(document.getElementById('skill' + this.num).clientHeight);
         }
     }
+    if (run) {
+        showProjects(sk);
+        return;
+    }
+    run = true;
     var id = setInterval(frame, 2);
     var skills = [new Skill(0, []), new Skill(1, [2,3]), new Skill(2, [3]), new Skill(3, []), new Skill(4, [5,6]), new Skill(5, [6]), new Skill(6, []), new Skill(7, [8,9]), new Skill(8, [9]), new Skill(9, []), new Skill(10, [11]), new Skill(11, []), new Skill(12, [])];
     var row = 3;
@@ -108,14 +117,48 @@ function myMove() {
     var bounceFrames = 0;
     var v = -1;
     var a = 0.003;
-    function showProjects() {
+    function baseName(str)
+    {
+       var base = new String(str).substring(str.lastIndexOf('/') + 1); 
+       return base;
+    }
+    function showProjects(sk) {
+        console.log(sk);
+        var $cells = $carousel.find('.gallery-cell');
         $('#projectcarousel').css('display', 'block');
         var diff = $('#projectcarousel').height();
         for (var k = 0; k < 4; k++) {
             skills[1 + (3 * k)].top -= diff;
             setTop(1 + (3 * k));
         }
+        var requestURL = '/portfolio/portfolio.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function() {
+            var portfolio = request.response;
+            for (var p = 0; p < portfolio.length; p++) {
+                var have = false;
+                for (var s = 0; s < portfolio[p].skills.length; s++) {
+                    
+                    if (sk == baseName(portfolio[p].skills[s])) {
+                        console.log(baseName(portfolio[p].skills[s]));
+                        have = true;
+                    }
+                }
+                if (!have) {
+                    console.log(p)
+                    var $carousel = $('.carousel').flickity({
+                    });
+                    $carousel.flickity( 'remove', $cells.slice(p, p + 1) );
+                    off--;
+                }
+            }
+
+        }
     }
+    
     function frame() {
         var changed = false;
         for (i = 0; i < 4; i++) {
@@ -150,7 +193,7 @@ function myMove() {
             row -= 1;
             if (row == 0) {
                 clearInterval(id);
-                showProjects();
+                showProjects(sk);
             }
         }
     }
@@ -162,13 +205,11 @@ function myMove() {
     }
     
 }
+
 </script>
 <script>
-    var flkty = new Flickity( '.main-gallery', {
-        // options
-        cellAlign: 'left',
-        contain: true,
-        wrapAround: true
+    var $carousel = $('.carousel').flickity({
+      initialIndex: 1
     });
     var pattern = Trianglify({
         height: window.innerHeight,
