@@ -3,20 +3,18 @@
         <title>
             Contact Me - Hudson Chromy
         </title>
-        <link rel="stylesheet" type="text/css" href="../style.css">
+        <link rel="stylesheet" type="text/css" href="../../style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|BioRhyme+Expanded:800|Bungee+Outline|Bungee+Shade|Creepster|Miltonian+Tattoo|Podkova:700|Rye|Slackey&display=swap" rel="stylesheet">
-        <?php include('/cdns.php');?>
-        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great&display=swap" rel="stylesheet">
+        <?php include('../../cdns.php');?>
     </head>
 <body>
-<?php include('/menu.php');?>
+<?php include('../../menu.php');?>
     <div class="col-sm-12">
-        <?php include('/sidebar.php')?>
+        <?php include('../../sidebar.php')?>
             <div class="section">
                 <h1>Polyfold</h1>
                 <img src="/images/portfolio/polyfold/polyfold.gif" alt="Polyfold" style="width: 80%;">
