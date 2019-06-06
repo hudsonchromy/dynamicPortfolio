@@ -74,6 +74,7 @@ function makeNone() {
 }
 
 function myMove(sk) {
+    $('#hint').css('display', 'none');
     class Skill {
         constructor(num, below) {
             this.below = below;
@@ -128,7 +129,6 @@ function myMove(sk) {
         console.log(sk);
         var $cells = $carousel.find('.gallery-cell');
         $('#projectcarousel').css('display', 'block');
-        $('#hint').css('display', 'none');
         var diff = $('#projectcarousel').height();
         for (var k = 0; k < 4; k++) {
             skills[1 + (3 * k)].top -= diff;
