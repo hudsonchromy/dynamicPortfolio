@@ -64,6 +64,7 @@
                 endforeach;?>
             </div>
     </div>
+    <p id="hint">Click on a skill to see my projects</p>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 <script>
@@ -96,9 +97,9 @@ function myMove(sk) {
         atBottom() {
             let diff = 0;
             for (var j = 0; j < this.below.length; j++) {
-                diff += skills[this.below[j]].height() + 10;
+                diff += skills[this.below[j]].height();
             }
-            return($('html').height() - diff + 10 > document.getElementById("skill" + this.num).getBoundingClientRect().bottom);
+            return($('html').height() - diff - 10 > document.getElementById("skill" + this.num).getBoundingClientRect().bottom);
         }
         height() {
             return(document.getElementById('skill' + this.num).clientHeight);
@@ -106,6 +107,7 @@ function myMove(sk) {
     }
     if (run) {
         showProjects(sk);
+        consoel.log('here');
         return;
     }
     run = true;
@@ -126,6 +128,7 @@ function myMove(sk) {
         console.log(sk);
         var $cells = $carousel.find('.gallery-cell');
         $('#projectcarousel').css('display', 'block');
+        $('#hint').css('display', 'none');
         var diff = $('#projectcarousel').height();
         for (var k = 0; k < 4; k++) {
             skills[1 + (3 * k)].top -= diff;
@@ -137,6 +140,7 @@ function myMove(sk) {
         request.responseType = 'json';
         request.send();
         request.onload = function() {
+            var $carousel = $('.carousel').flickity({});
             var portfolio = request.response;
             for (var p = 0; p < portfolio.length; p++) {
                 var have = false;
@@ -149,10 +153,7 @@ function myMove(sk) {
                 }
                 if (!have) {
                     console.log(p)
-                    var $carousel = $('.carousel').flickity({
-                    });
                     $carousel.flickity( 'remove', $cells.slice(p, p + 1) );
-                    off--;
                 }
             }
 
