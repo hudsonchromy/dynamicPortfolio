@@ -15,7 +15,7 @@
     }, {
         "name": "Bowling Scores",
         "description": "A Javascript web application that charts my bowling scores using ChartJS.", 
-        "image": "../images/portfolio/bowling.png", 
+        "image": "../images/portfolio/bowling.jpg", 
         "skills":["../images/skills/Javascript.png"],
         "link": "/portfolio/bowling"
     }, {
