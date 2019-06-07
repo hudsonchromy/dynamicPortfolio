@@ -18,7 +18,7 @@
 <?php include('../../menu.php');?>
     <div class="col-sm-12">
         <?php include('../../sidebar.php')?>
-        <h1 style="colo: #8e5ea2;">Bowling Scores</h1>
+        <h1 style="color: #8e5ea2;">Bowling Scores</h1>
         <canvas id="bar-chart" width="800" height="250"></canvas>
     </div>
 </div>
