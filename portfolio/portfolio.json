@@ -13,6 +13,12 @@
         "skills":["../images/skills/Java.png", "../images/skills/CSS.png"],
         "link": "/portfolio/polyfold"
     }, {
+        "name": "Bowling Scores",
+        "description": "A Javascript web application that charts my bowling scores using ChartJS.", 
+        "image": "../images/portfolio/bowling.png", 
+        "skills":["../images/skills/Javascript.png"],
+        "link": "/portfolio/bowling"
+    }, {
         "name": "Javadoc Comment Writer",
         "description": "", 
         "image": "../images/portfolio/commentmaker.png", 
