@@ -9,7 +9,6 @@
         <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|BioRhyme+Expanded:800|Bungee+Outline|Bungee+Shade|Creepster|Miltonian+Tattoo|Podkova:700|Rye|Slackey&display=swap" rel="stylesheet">
         <?php include('../../cdns.php');?>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great&display=swap" rel="stylesheet">
@@ -19,7 +18,9 @@
     <div class="col-sm-12">
         <?php include('../../sidebar.php')?>
         <h1 style="color: #8e5ea2;">Bowling Scores</h1>
+        <div style="height: 60%;">
         <canvas id="bar-chart" width="800" height="250"></canvas>
+        </div>
     </div>
 </div>
 </body>
@@ -52,23 +53,32 @@
     var first = [];
     var second = [];
     var third = [];
+    var avrg = [];
+    var tot = 0;
     for(let i = 0; i < scores.length; i++) {
         nums.push(i + 1);
         if (i % 3 == 0) {
             console.log('here');
             first.push(scores[i]);
+            tot += scores[i];
+            avrg.push(null);
         }
         else {
             first.push(null);
         }
         if (i % 3 == 1) {
             second.push(scores[i]);
+            tot += scores[i];
+            avrg.push(null);
         }
         else {
             second.push(null);
         }
         if (i % 3 == 2) {
             third.push(scores[i]);
+            tot += scores[i];
+            avrg.push(tot / 3);
+            tot = 0;
         }
         else {
             third.push(null);
@@ -83,32 +93,48 @@
             data: scores,
             label: 'All Games',
             borderColor: "#3e95cd",
-            fill: false
+            fill: false,
         },
         {
             data: first,
             label: 'First Game',
             pointRadius: 5,
             backgroundColor: "#8e5ea2",
-            fill: false
+            fill: false,
+            showLine: false
         },
         {
             data: second,
             label: 'Second Game',
             pointRadius: 5,
             backgroundColor: "#3cba9f",
-            fill: false
+            fill: false,
+            showLine: false
         },
         {
             data: third,
             label: 'Third Game',
             pointRadius: 5,
             backgroundColor: "#e8c3b9",
-            fill: false
+            fill: false,
+            showLine: false
+        },
+        {
+            data: avrg,
+            label: 'Average',
+            pointRadius: 5,
+            backgroundColor: "#ffabab",
+            borderColor: '#ffabab',
+            hidden: true,
+            fill: false,
+            showLine: true
         }
       ]
     },
     options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        spanGaps: true,
         display: true,
         scales: {
             yAxes: [{
