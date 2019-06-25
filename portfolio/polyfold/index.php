@@ -16,8 +16,10 @@
     <div class="col-sm-12">
         <?php include('../../sidebar.php')?>
             <div class="section">
-                <h1>Polyfold</h1>
+                <a href="https://github.com/andrewjmcgehee/polyfold" target="_blank"><h1>Polyfold</h1></a>
+                <p>PolyFold is a crowdsourcing computer game for three dimensional (3D) protein folding. The goal is to involve citizen scientists to play an interactive, intuitive, and visually appealing computer game where they can make moves to change 3D conformations of proteins and get scored based on experimentally determined protein contact maps. Gamers strive to achieve the best score by folding protein structures such that they agree with the contact map data. Folding puzzles are available at different levels of complexities for beginner, intermediate, as well as advanced users. No prior scientific background is needed to play PolyFold. It is based entirely on human intuition and passion for solving puzzles with important implications in science and medicine. Play PolyFold!</p>
                 <img src="/images/portfolio/polyfold/polyfold.gif" alt="Polyfold" style="width: 80%;">
+
             </div>
         <div>
     </div>
