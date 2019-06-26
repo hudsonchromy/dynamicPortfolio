@@ -23,6 +23,7 @@
         for ($i=0; $i < sizeOf($jsonArray); $i++):
         ?>
                 <div class="card gallery-cell">
+                    <script>console.log("here");</script>
                     <h1><?php echo $jsonArray[$i]->name;?></h1>
                     <a href="<?php echo $jsonArray[$i]->link; ?>">
                     <img src="<?php echo $jsonArray[$i]->image; ?>" alt="image">
