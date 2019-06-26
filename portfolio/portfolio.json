@@ -16,7 +16,7 @@
         "name": "Llama Lava",
         "description": "Llama Lava is a web game created in PHP and SQL.",
         "image": "../images/portfolio/llamaLava.png",
-        "skills":["../images/skills/PHP.png", "../images/skills/SQL.png", "../images/skills/HTML.png" "../images/skills/Javascript.png"],
+        "skills":["../images/skills/PHP.png", "../images/skills/SQL.png", "../images/skills/HTML.png", "../images/skills/Javascript.png"],
         "link": "aub.ie/llamaLava"
     }, {
         "name": "Bowling Scores",
