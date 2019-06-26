@@ -25,10 +25,16 @@
         "skills":["../images/skills/Javascript.png"],
         "link": "/portfolio/bowling"
     }, {
+        "name": "Portfolio Website",
+        "description": "Website to show off projects and skills.",
+        "image": "../images/portfolio/portfolio.png",
+        "skills":["../images/skills/PHP.png", "../images/skills/Bootstrap.png", "../images/skills/HTML.png", "../images/skills/Javascript.png"],
+        "link": "http://aub.ie/llamaLava"
+    }, {
         "name": "Javadoc Comment Writer",
         "description": "", 
         "image": "../images/portfolio/commentmaker.png", 
-        "skills":["../images/skills/Java.png"],
+        "skills":["../images/skills/PHP.png", "../images/skills/Bootstrap.png", "../images/skills/HTML.png", "../images/skills/Javascript.png"],
         "link": ""
     }, {
         "name": "Competetive Programming Team",
