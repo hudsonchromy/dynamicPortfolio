@@ -211,7 +211,7 @@ function myMove(sk) {
 </script>
 <script>
     var $carousel = $('.carousel').flickity({
-      initialIndex: 1
+      initialIndex: 0
     });
     var pattern = Trianglify({
         height: window.innerHeight,
