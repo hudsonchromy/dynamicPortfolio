@@ -105,8 +105,7 @@ h2, h3 {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    opacity: 0.7;
-    background-color: #00974A; /* Black */
+    background-color: rgba(0, 151, 74, 0.75);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
   }
