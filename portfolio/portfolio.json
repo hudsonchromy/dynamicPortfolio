@@ -13,6 +13,12 @@
         "skills":["../images/skills/Java.png", "../images/skills/CSS.png"],
         "link": "/portfolio/polyfold"
     }, {
+        "name": "Google Location CLI",
+        "description": "Developed Python CLI to parse Google Location Data and easily provide information about when the user was tracked in a certain area.",
+        "image": "../images/portfolio/googleLocationCLI.png",
+        "skills":["../images/skills/Python.png"],
+        "link": "https://github.com/hudsonchromy/google_location_cli"
+    }, {
         "name": "Llama Lava",
         "description": "Llama Lava is a web game created in PHP and SQL.",
         "image": "../images/portfolio/llamaLava.png",
