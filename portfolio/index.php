@@ -12,6 +12,7 @@
     <?php include('../sidebar.php')?>
     <div class="main-gallery">
         <?php   
+
         $i = 0;
         $jsonArray = json_decode(file_get_contents('portfolio.json'));
         for ($i=0; $i < sizeOf($jsonArray); $i++):
