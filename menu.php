@@ -24,12 +24,12 @@
   display: none;
 }
 
-.dropdown {
+.dropdn {
   float: left;
   overflow: hidden;
 }
 
-.dropdown .dropbtn {
+.dropdn .dropbttn {
   font-size: 17px;    
   border: none;
   outline: none;
@@ -58,7 +58,7 @@
   text-align: left;
 }
 
-.topnav a:hover, .dropdown:hover .dropbtn {
+.topnav a:hover, .dropdown:hover .dropbttn {
   background-color: #555;
   color: white;
 }
@@ -73,7 +73,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  .topnav a:not(:first-child), .dropdn .dropbttn {
     display: none;
   }
   .topnav a.icon {
@@ -103,7 +103,7 @@
   <a href="/" class="active">Home</a>
   <a href="/portfolio/">Portfolio</a>
   <a href="/skills/">Skills</a>
-  <a href="/resume-19.pdf">Resume</a>
+  <a href="/resume.pdf">Resume</a>
   <a href="/contact/">Contact</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
