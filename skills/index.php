@@ -65,7 +65,6 @@
                 endforeach;?>
             </div>
     </div>
-    <p id="hint">Click on a skill to see my projects</p>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 <script>
@@ -79,7 +78,7 @@ function myMove(sk) {
     class Skill {
         constructor(num, below) {
             this.below = below;
-            this.top = 16;
+            this.top = 28;
             this.num = num;
             this.velocity = 4;
             this.m = true;
@@ -94,7 +93,7 @@ function myMove(sk) {
             return this.m;
         }
         accelerate() {
-            this.velocity += 0.05;
+            this.velocity += 0.08;
         }
         atBottom() {
             let diff = 0;
