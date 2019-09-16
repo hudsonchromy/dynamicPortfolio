@@ -213,8 +213,9 @@ h2, h3 {
   }
 
   #projectcarousel img {
-    height: 62%;
+    max-height: 62%;
     max-width: 90%;
+    width: 80
     width: auto;
   }
 
