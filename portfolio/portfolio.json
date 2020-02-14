@@ -7,6 +7,13 @@
         "link": "/portfolio/visualizer"
         
     }, {
+        "name": "Netflix Shuffler",
+        "description": "Shuffles popular Netflix shows.", 
+        "image": "../images/portfolio/polyfoldPicture.png", 
+        "skills":["../images/skills/PHP.png", "../images/skills/HTML.png", "../images/skills/Javascript.png"],
+        "link": "http://netflixshuffler.herokuapp.com/"
+
+    }, {
         "name": "Polyfold",
         "description": "Polyfold is a 3D video game developed in Java with JavaFX made to crowdsource information regarding protein folding.", 
         "image": "../images/portfolio/polyfoldPicture.png", 
