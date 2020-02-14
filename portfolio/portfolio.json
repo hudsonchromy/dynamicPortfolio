@@ -9,7 +9,7 @@
     }, {
         "name": "Netflix Shuffler",
         "description": "Shuffles popular Netflix shows.", 
-        "image": "../images/portfolio/polyfoldPicture.png", 
+        "image": "../images/portfolio/netflix.png", 
         "skills":["../images/skills/PHP.png", "../images/skills/HTML.png", "../images/skills/Javascript.png"],
         "link": "http://netflixshuffler.herokuapp.com/"
 
