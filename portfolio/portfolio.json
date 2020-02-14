@@ -42,7 +42,7 @@
         "description": "Website to show off projects and skills.",
         "image": "../images/portfolio/portfolio.png",
         "skills":["../images/skills/PHP.png", "../images/skills/Bootstrap.png", "../images/skills/HTML.png", "../images/skills/Javascript.png"],
-        "link": "http://aub.ie/llamaLava"
+        "link": "https://github.com/hudsonchromy/dynamicPortfolio/tree/master/images/portfolio"
     }, {
         "name": "Javadoc Comment Writer",
         "description": "", 
