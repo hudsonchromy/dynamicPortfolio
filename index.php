@@ -23,7 +23,7 @@
                     <img id="logoPicture"src="images/DVD.png" alt="" style="margin-left: 0px;">
                 </div>
             </a>
-                <img src="images/parot.png" alt="Parrot">
+                <img src="images/hello.png" alt="Parrot">
             </div>
         </div>
 </body>
