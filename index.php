@@ -14,10 +14,6 @@
     <?php include('menu.php');?>
     <div class="col-sm-12">
         <?php include('sidebar.php');?>
-        
-            <hb>
-                Hudson Chromy
-            </hb>
             <a href="https://www.youtube.com/watch?v=QOtuX0jL85Y" target="_blank">
                 <div id ="myAnimation">
                     <img id="logoPicture"src="images/DVD.png" alt="" style="margin-left: 0px;">
