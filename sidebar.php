@@ -3,7 +3,7 @@
         <a href="../" style="text-decoration: none;">
         <img alt="Picture of Hudson Chromy" class="img-circle" src="/images/hudsonChromy.jpg">
         <h2><span id="firstLetter">H</span>udson Chromy</h2>
-        <h3>Auburn University '22</h3>
+        <h3>Auburn University 2022</h3>
         <h3 id="lastSub">Software Engineering</h3>
         </a>
         <a href="/portfolio">Portfolio</a>
