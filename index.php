@@ -63,6 +63,7 @@ function myMove() {
         }
         if (b1 && b2) {
             alert("it hit the corner");
+            console.log("here");
         }
         posX += changeX; 
         posY += changeY;
