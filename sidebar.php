@@ -7,7 +7,6 @@
         <h3 id="lastSub">Software Engineering</h3>
         </a>
         <a href="/portfolio">Portfolio</a>
-        <a href="/skills">Skills</a>
         <a href="/resume.pdf" target="_blank">Resume</a>
         <a href="/contact">Contact</a>
         <br>
