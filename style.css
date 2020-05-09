@@ -351,3 +351,105 @@ p2 {
 
 
 
+.contain {
+  position: relative;
+  width: 40%;
+  height: 40%;
+  float: left;
+  margin: 10px;
+}
+
+.port {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  padding: 5px;
+}
+.port h1 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.contain:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slideButton {
+  z-index: -1;
+  height: 40px;
+  width: 180px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0px 10px 10px 0px;
+  transition:transform 1s;
+  background-color: #008CBA;
+
+}
+.slideButton h1 {
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.secondSB {
+  top: 50px;
+}
+
+h1:nth-of-type(2) {
+  top: 50px;
+}
+
+.contain:hover .slideButton {
+  z-index: 2;
+  transform:translateX(150px);
+}
+
+.port img {
+  height: 80%;
+  width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
