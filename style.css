@@ -463,7 +463,7 @@ h1:nth-of-type(2) {
   }
   .contain:hover .slideButton, .contain.hover_effect .slideButton  {
   z-index: 2;
-  transform:translateX(130px);
+  transform:translateX(100px);
 }
 }
 
