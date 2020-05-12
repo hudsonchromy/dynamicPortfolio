@@ -349,7 +349,10 @@ p2 {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-
+.hover {
+-webkit-user-select: none;
+-webkit-touch-callout: none;        
+}
 
 .contain {
   position: relative;
@@ -388,7 +391,7 @@ p2 {
   background-color: #008CBA;
 }
 
-.contain:hover .overlay, .contain:active .overlay {
+.contain:hover .overlay, .contain.hover_effect .overlay {
   opacity: 1;
 }
 
@@ -430,7 +433,7 @@ h1:nth-of-type(2) {
   top: 50px;
 }
 
-.contain:hover .slideButton, .contain:active .slideButton {
+.contain:hover .slideButton, .contain.hover_effect .slideButton {
   z-index: 2;
   transform:translateX(150px);
 }
@@ -458,7 +461,7 @@ h1:nth-of-type(2) {
   .slideButton {
     width: 130px;
   }
-  .contain:hover .slideButton, .contain:active .slideButton {
+  .contain:hover .slideButton, .contain.hover_effect .slideButton  {
   z-index: 2;
   transform:translateX(130px);
 }
