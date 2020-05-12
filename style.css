@@ -388,7 +388,7 @@ p2 {
   background-color: #008CBA;
 }
 
-.contain:hover .overlay {
+.contain:hover .overlay, .contain:active .overlay {
   opacity: 1;
 }
 
@@ -430,7 +430,7 @@ h1:nth-of-type(2) {
   top: 50px;
 }
 
-.contain:hover .slideButton {
+.contain:hover .slideButton, .contain:active .slideButton {
   z-index: 2;
   transform:translateX(150px);
 }
@@ -458,7 +458,7 @@ h1:nth-of-type(2) {
   .slideButton {
     width: 130px;
   }
-  .contain:hover .slideButton {
+  .contain:hover .slideButton, .contain:active .slideButton {
   z-index: 2;
   transform:translateX(130px);
 }
