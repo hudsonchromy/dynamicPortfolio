@@ -40,9 +40,9 @@
                 <div class="text"><?php echo $jsonArray[$i]->description;?></div>
               </div>
 
-              <div class="slideButton "><a href="<?php echo $jsonArray[$i]->website;?>" target="_blank"><h1>Website</h1></a></div>
+              <a href="<?php echo $jsonArray[$i]->website;?>" target="_blank"><div class="slideButton "><h1>Website</h1></div></a>
 
-              <div class="slideButton secondSB"><a href="<?php echo $jsonArray[$i]->github;?>" target="_blank"><h1>Github</h1></a></div>
+              <a href="<?php echo $jsonArray[$i]->github;?>" target="_blank"><div class="slideButton secondSB"><h1>Github</h1></div></a>
 
             </div>
 
@@ -62,10 +62,10 @@
               <?$tabs = 0;?>
               <?if($jsonArray[$i+1]->website != ""):?>
 
-              <div class="slideButton "><a href="<?php echo $jsonArray[$i+1]->website;?>" target="_blank"><h1>Website</h1></a></div>
+              <a href="<?php echo $jsonArray[$i+1]->website;?>" target="_blank"><div class="slideButton "><h1>Website</h1></div></a>
               <?endif;?>
               <?if($jsonArray[$i+1]->github != ""):?>
-              <div class="slideButton <? if($tabs==1){echo('secondSB');}?>"><a href="<?php echo $jsonArray[$i+1]->github;?>" target="_blank"><h1>Github</h1></a></div>
+              <a href="<?php echo $jsonArray[$i+1]->github;?>" target="_blank"><div class="slideButton <? if($tabs==1){echo('secondSB');}?>"><h1>Github</h1></div></a>
               <?endif;?>
             </div>
             <? endif; ?>
