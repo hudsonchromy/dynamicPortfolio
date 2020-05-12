@@ -56,7 +56,7 @@ function myMove() {
             changeColor();
             b1 = true;
         }
-        else if (posX >= ($('html').width() - 130 - change) || posX < -14) {
+        if (posX >= ($('html').width() - 130 - change) || posX < -14) {
             changeX *= -1;
             changeColor();
             b2 = true;
@@ -71,25 +71,13 @@ function myMove() {
         elem.style.left = posX + 'px'; 
     }
     function changeColor() {
-        var logos = ['pink.png', 'pink2.png', 'green.png', 'grey.png', 'yellow.png'];
-        var colors = ['#D43A74', '#EE2F50', '#658B50', '#504B4F', '#FFCD48']
+        var logos = ['DVD1.png', 'DVD2.png', 'DVD3.png', 'DVD4.png'];
+        var colors = ['#526178', '#c7728c', '#3d7f99', '##b5e7d0']
         var colorNum = Math.floor(Math.random()*logos.length);
         $('#logoPicture').attr('src', 'images/dvds/' + logos[colorNum])
         $('.active').css("background-color", colors[colorNum]);
     }
 }
 </script>
-    <script>
-			var pattern = Trianglify({
-				height: window.innerHeight,
-				width: window.innerWidth,
-				cell_size: 80 + Math.random() * 70,
-				variance: 0.2 + Math.random(),
-				stroke_width: 1.8 + Math.random(),
-				x_colors: 'Greys',
-				y_colors: 'match_x'
-			});
-			document.body.style.background = 'url(' + pattern.canvas().toDataURL() + ')';
-			document.body.style.backgroundAttachment = 'fixed';
-		</script>
+
 </html>
