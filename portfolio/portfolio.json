@@ -35,19 +35,19 @@
         "name": "Portfolio Website",
         "description": "Website to show off projects and skills.",
         "image": "../images/portfolio/portfolio.png",
-        "website": "https://github.com/hudsonchromy/dynamicPortfolio/tree/master/images/portfolio",
-        "github": ""
+        "website": "",
+        "github": "https://github.com/hudsonchromy/dynamicPortfolio/tree/master/images/portfolio"
     }, {
         "name": "Javadoc Comment Writer",
         "description": "", 
         "image": "../images/portfolio/commentmaker.png", 
         "website": "",
-        "github": ""
+        "github": "https://github.com/hudsonchromy/javadoc-comment-maker"
     }, {
         "name": "Competetive Programming Team",
         "description": "",
-        "image": "http://www.hudsonchromy.com/images/portfolio/placeholder.jpg",
+        "image": "http://ksuweb.kennesaw.edu/~snorth/2019-SER-ICPC-KSU_Pictures/20191109_094348.jpg",
         "website": "",
-        "github": ""
+        "github": "https://github.com/hudsonchromy/kattis"
     }
 ]
