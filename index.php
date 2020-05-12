@@ -56,7 +56,7 @@ function myMove() {
             changeColor();
             b1 = true;
         }
-        if (posX >= ($('html').width() - 130 - change) || posX < -14) {
+        else if (posX >= ($('html').width() - 130 - change) || posX < -14) {
             changeX *= -1;
             changeColor();
             b2 = true;
