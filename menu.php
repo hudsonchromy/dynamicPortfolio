@@ -102,7 +102,6 @@
 <div class="topnav" id="myTopnav">
   <a href="/" class="active">Home</a>
   <a href="/portfolio/">Portfolio</a>
-  <a href="/skills/">Skills</a>
   <a href="/resume.pdf">Resume</a>
   <a href="/contact/">Contact</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
