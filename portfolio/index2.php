@@ -30,7 +30,7 @@
         for ($i=0; $i < sizeOf($jsonArray); $i+=2):
         ?>
         <div>
-            <div class="contain">
+            <div class="contain hover">
               <div class="port">
                 <h1><?php echo $jsonArray[$i]->name;?></h1>
                 <img src="<?php echo $jsonArray[$i]->image; ?>">
@@ -47,7 +47,7 @@
             </div>
 
             <? if($i+1 < sizeOf($jsonArray)): ?>
-            <div class="contain">
+            <div class="contain hover">
               <div class="port">
                 <h1><?php echo $jsonArray[$i+1]->name;?></h1>
                 <img src="<?php echo $jsonArray[$i+1]->image; ?>">
@@ -76,6 +76,15 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 <script>
+    $(document).ready(function() {
+    $('.hover').on('touchstart touchend', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover_effect');
+    });
+});
+
+
+
     var flkty = new Flickity( '.main-gallery', {
         // options
         cellAlign: 'left',
