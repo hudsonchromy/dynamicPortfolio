@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Algorithm Visualizer",
+        "description": "This is a Javascript application that shows the search space and paths found by A-Star BFS and DFS algorithms.", 
+        "image": "../images/portfolio/visualizerPicture.jpg", 
+        "website": "/portfolio/visualizer",
+        "github": "https://github.com/hudsonchromy/dynamicPortfolio/tree/master/portfolio/visualizer"
+        
+    }, {
+        "name": "Netflix Shuffler",
+        "description": "Shuffles popular Netflix shows.", 
+        "image": "../images/portfolio/netflix.png", 
+        "website": "http://netflixshuffler.herokuapp.com/",
+        "github": "https://github.com/hudsonchromy/NetflixShuffler"
+
+    }, {
+        "name": "Polyfold",
+        "description": "Polyfold is a 3D video game developed in Java with JavaFX made to crowdsource information regarding protein folding.", 
+        "image": "../images/portfolio/polyfoldPicture.png", 
+        "website": "/portfolio/polyfold",
+        "github": "https://github.com/hudsonchromy/polyfold"
+    }, {
+        "name": "Google Location CLI",
+        "description": "Developed Python CLI to parse Google Location Data and easily provide information about when the user was tracked in a certain area.",
+        "image": "../images/portfolio/googleLocationCLI.png",
+        "website": "",
+        "github": "https://github.com/hudsonchromy/google_location_cli"
+    }, {
+        "name": "Llama Lava",
+        "description": "Llama Lava is a web game created in PHP and SQL.",
+        "image": "../images/portfolio/llamaLava.png",
+        "website": "http://aub.ie/llamaLava",
+        "github": ""
+    }, {
+        "name": "Portfolio Website",
+        "description": "Website to show off projects and skills.",
+        "image": "../images/portfolio/portfolio.png",
+        "website": "https://github.com/hudsonchromy/dynamicPortfolio/tree/master/images/portfolio",
+        "github": ""
+    }, {
+        "name": "Javadoc Comment Writer",
+        "description": "", 
+        "image": "../images/portfolio/commentmaker.png", 
+        "website": "",
+        "github": ""
+    }, {
+        "name": "Competetive Programming Team",
+        "description": "",
+        "image": "http://www.hudsonchromy.com/images/portfolio/placeholder.jpg",
+        "website": "",
+        "github": ""
+    }
+]
