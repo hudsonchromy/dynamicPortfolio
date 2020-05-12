@@ -359,6 +359,8 @@ p2 {
   margin: 10px;
 }
 
+
+
 .port {
   display: block;
   width: 100%;
@@ -434,10 +436,33 @@ h1:nth-of-type(2) {
 }
 
 .port img {
-  height: 80%;
+  height: 70%;
   width: auto;
+  max-width: 100%;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .contain {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+  .port h1 {
+  font-size: 30px;
+}
+.slideButton h1 {
+  font-size: 30px;
+  }
+  .slideButton {
+    width: 130px;
+  }
+  .contain:hover .slideButton {
+  z-index: 2;
+  transform:translateX(130px);
+}
+}
 
 
 
