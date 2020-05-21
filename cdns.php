@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css?family=Kadwa:700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:700&display=swap" rel="stylesheet">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <script>
