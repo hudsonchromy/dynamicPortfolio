@@ -1,5 +1,12 @@
 [
     {
+        "name": "Auburn University Housing",
+        "description": "Auburn University Housing Wbsite", 
+        "image": "../images/portfolio/housing.png", 
+        "website": "http://auburn.edu/administration/housing/",
+        "github":""
+        
+    },{
         "name": "Algorithm Visualizer",
         "description": "This is a Javascript application that shows the search space and paths found by A-Star BFS and DFS algorithms.", 
         "image": "../images/portfolio/visualizerPicture.jpg", 
